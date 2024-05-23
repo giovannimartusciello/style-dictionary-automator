@@ -7,6 +7,13 @@ jobs:
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: "devdatatools-firebase-adminsdk.json"
+          json: ${{ github.event.client_payload.tokens }}
+          dir: "src/"
       - env:
           MESSAGE: ${{ github.event.client_payload.tokens }}
         run: echo $MESSAGE
