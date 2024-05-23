@@ -1,0 +1,194 @@
+{
+  "color": {
+    "darkPalette": {
+      "primary": {
+        "0": {
+          "value": "#F0F7FF",
+          "type": "color"
+        },
+        "20": {
+          "value": "#D9EAFF",
+          "type": "color"
+        },
+        "40": {
+          "value": "#9EC0FF",
+          "type": "color"
+        },
+        "60": {
+          "value": "#4670f9",
+          "type": "color"
+        },
+        "80": {
+          "value": "#0028E2",
+          "type": "color"
+        },
+        "90": {
+          "value": "#0E197B",
+          "type": "color"
+        },
+        "95": {
+          "value": "#151631",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "0": {
+          "value": "#471900",
+          "type": "color"
+        },
+        "20": {
+          "value": "#84320f",
+          "type": "color"
+        },
+        "40": {
+          "value": "#c1502d",
+          "type": "color"
+        },
+        "60": {
+          "value": "#fe7758",
+          "type": "color"
+        },
+        "80": {
+          "value": "#ffb6ab",
+          "type": "color"
+        },
+        "90": {
+          "value": "#ffdfdb",
+          "type": "color"
+        },
+        "95": {
+          "value": "#fff3f2",
+          "type": "color"
+        }
+      },
+      "neutrals": {
+        "0": {
+          "value": "#ffffff",
+          "type": "color"
+        },
+        "20": {
+          "value": "#f5f7fa",
+          "type": "color"
+        },
+        "40": {
+          "value": "#e5e9ef",
+          "type": "color"
+        },
+        "60": {
+          "value": "#c9cddb",
+          "type": "color"
+        },
+        "80": {
+          "value": "#959bb1",
+          "type": "color"
+        },
+        "90": {
+          "value": "#5f6586",
+          "type": "color"
+        },
+        "95": {
+          "value": "#34385c",
+          "type": "color"
+        },
+        "100": {
+          "value": "#151631",
+          "type": "color"
+        }
+      },
+      "overlays": {
+        "base": {
+          "value": "rgba(0,0,0,0.3)",
+          "type": "color"
+        }
+      },
+      "semantic": {
+        "success": {
+          "20": {
+            "value": "#097A38",
+            "type": "color"
+          },
+          "40": {
+            "value": "#16a044",
+            "type": "color"
+          },
+          "60": {
+            "value": "#50c470",
+            "type": "color"
+          },
+          "95": {
+            "value": "#e9fbed",
+            "type": "color"
+          }
+        },
+        "warning": {
+          "20": {
+            "value": "#996600",
+            "type": "color"
+          },
+          "40": {
+            "value": "#fc9505",
+            "type": "color"
+          },
+          "60": {
+            "value": "#ffbd66",
+            "type": "color"
+          },
+          "95": {
+            "value": "#fffaeb",
+            "type": "color"
+          }
+        },
+        "error": {
+          "20": {
+            "value": "#B22A0E",
+            "type": "color"
+          },
+          "40": {
+            "value": "#e23424",
+            "type": "color"
+          },
+          "60": {
+            "value": "#f86865",
+            "type": "color"
+          },
+          "95": {
+            "value": "#fff0f0",
+            "type": "color"
+          }
+        }
+      },
+      "shadow": {
+        "base": {
+          "value": "rgba(21,22,49,0.06)",
+          "type": "color"
+        }
+      },
+      "additional": {
+        "brand1": {
+          "value": "#A8EBD9",
+          "type": "color"
+        },
+        "brand2": {
+          "value": "#F3739E",
+          "type": "color"
+        },
+        "brand3": {
+          "value": "#FFB049",
+          "type": "color"
+        },
+        "brand4": {
+          "value": "#FFDC4F",
+          "type": "color"
+        },
+        "brand5": {
+          "value": "#FE815B",
+          "type": "color"
+        },
+        "brand6": {
+          "value": "#FFD0DF",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

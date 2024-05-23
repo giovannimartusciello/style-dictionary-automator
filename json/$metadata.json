@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "Light - Palette",
+    "Light - Semantic",
+    "Dark - Palette",
+    "Dark - Semantic",
+    "Mobile UI",
+    "Web UI"
+  ]
+}
