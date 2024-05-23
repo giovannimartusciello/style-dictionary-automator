@@ -18,9 +18,9 @@ jobs:
       - uses: devops-actions/json-to-file@v1.0.0
         with:
           json: '${{ github.event.client_payload.tokens }}'
-          filename: 'test.json'
+          filename: 'json/test.json'
       - name: Make a commit
         run: |
-          git add json/test.json
+          git add test.json
           git commit -m "Commit by bot"
           git push
