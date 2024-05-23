@@ -1,6 +1,6 @@
 on:
   repository_dispatch:
-    types: [test_result]
+    types: [update-tokens]
 
 jobs:
   run_if_failure:
