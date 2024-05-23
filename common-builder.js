@@ -46,7 +46,6 @@ export class Builder {
             // is contained within the given array
             const isSameTokenType = token.type === element.type 
             const isPathInArray = element.path.some((path) => path === token.path[0]) 
-
             return isSameTokenType && isPathInArray
           }
           else {
@@ -97,75 +96,15 @@ export class Common {
     return token.type === 'color' && (token.value.startsWith('#') || token.value.startsWith('rgb'));
   }
 
-  static isBowShadow(token) {
-    return token.type === 'boxShadow';
-  }
-
   static isBorderWidth(token) {
-    return token.type === 'borderWidth';
+    return token.path[0] === 'borders';
   }
 
   static isBorderRadius(token) {
-    return token.type === 'borderRadius';
-  }
-
-  static isOpacity(token) {
-    return token.type === 'opacity';
-  }
-
-  static isLineHeight(token) {
-    return token.type === 'lineHeights';
-  }
-
-  static isFontSize(token) {
-    return token.type === 'fontSizes';
-  }
-
-  static isLetterSpacing(token) {
-    return token.type === 'letterSpacing';
-  }
-
-  static isParagraphSpacing(token) {
-    return token.type == "paragraphSpacing"
-  }
-
-  static isFontWeight(token) {
-    return token.type === 'fontWeights';
-  }
-
-  static isTextCase(token) {
-    return token.type === 'textCase';
-  }
-
-  static isTextDecoration(token) {
-    return token.type == "textDecoration"
-  }
-
-  static isFontFamilies(token) {
-    return token.type == "fontFamilies"
-  }
-
-  static isTypography(token) {
-    return token.type == "typography"
-  }
-  
-  static isSpacing(token) {
-    return token.type == "spacing"
+    return token.path[0] === 'radius';
   }
 
   static transform(name, value) {
     return StyleDictionary.transform[name].transformer({ value: value });
-  }
-
-  static cleanName(type,name) {
-    name = name.charAt(0).toLowerCase() + name.slice(1)
-    if (name.includes(type)) {
-      let newName = name.replace(type,'');
-      return isNaN(newName) ? newName : "_"+newName;
-    } else if (name.includes(type.slice(0, -1))) {
-      let newName = name.replace(type.slice(0, -1),'');
-      return isNaN(newName) ? newName : "_"+newName;
-    }
-    return name;
   }
 }

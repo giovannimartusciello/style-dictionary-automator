@@ -1,6 +1,6 @@
 {
   "source": [
-    "json/test.json"
+    "json/source.json"
   ],
   "platforms": {
     "compose": {
@@ -12,41 +12,7 @@
           "format": "compose/object",
           "className": "ColorPalette",
           "packageName": "com.webank.design_system.dictionary",
-          "filter": "isPaletteColor"
-        },
-        {
-          "destination": "DarkSemantics.kt",
-          "format": "compose/object",
-          "className": "DarkSemantics",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isDarkColor"
-        },
-        {
-          "destination": "LightSemantics.kt",
-          "format": "compose/object",
-          "className": "LightSemantics",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isLightColor"
-        },
-        {
-          "destination": "DarkShadowSemantics.kt",
-          "format": "compose/object",
-          "className": "DarkShadowSemantics",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isDarkShadowColor",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.Shadow"
-          }
-        },
-        {
-          "destination": "LightShadowSemantics.kt",
-          "format": "compose/object",
-          "className": "LightShadowSemantics",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isLightShadowColor",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.Shadow"
-          }
+          "filter": "isColor"
         },
         {
           "destination": "BorderRadius.kt",
@@ -67,117 +33,6 @@
           "options": {
             "import": "com.webank.common_ui_compose.theme.Border"
           }
-        },
-        {
-          "destination": "Opacity.kt",
-          "format": "compose/object",
-          "className": "Opacity",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isOpacity",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.Opacity"
-          }
-        },
-        {
-          "destination": "LineHeight.kt",
-          "format": "compose/object",
-          "className": "LineHeight",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isLineHeight",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.LineHeight"
-          }
-        },
-        {
-          "destination": "FontSize.kt",
-          "format": "compose/object",
-          "className": "FontSize",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isFontSize",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.FontSize"
-          }
-        },
-        {
-          "destination": "LetterSpacing.kt",
-          "format": "compose/object",
-          "className": "LetterSpacing",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isLetterSpacing",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.LetterSpacing"
-          }
-        },
-        {
-          "destination": "ParagraphSpacing.kt",
-          "format": "compose/object",
-          "className": "ParagraphSpacing",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isParagraphSpacing",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.ParagraphSpacing"
-          }
-        },
-        {
-          "destination": "FontWeight.kt",
-          "format": "compose/object",
-          "className": "FontWeight",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isFontWeight",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.FontWeight"
-          }
-        },
-        {
-          "destination": "TextCase.kt",
-          "format": "compose/object",
-          "className": "TextCase",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isTextCase",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.TextCase"
-          }
-        },
-        {
-          "destination": "TextDecoration.kt",
-          "format": "compose/object",
-          "className": "TextDecoration",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isTextDecoration",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.TextDecoration"
-          }
-        },
-        {
-          "destination": "FontFamilies.kt",
-          "format": "compose/object",
-          "className": "FontFamilies",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isFontFamilies",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.FontFamilies"
-          }
-        },
-        {
-          "filter": "isTypography",
-          "destination": "Typography.kt",
-          "format": "compose/object",
-          "className": "Typography",
-          "packageName": "com.webank.design_system.dictionary",
-          "options": {
-            "import": "com.webank.common_ui_compose.theme.Typography",
-            "outputReferences": true
-          }
-        },
-        {
-          "filter": "isSpacing",
-          "destination": "Spacing.kt",
-          "format": "compose/object",
-          "className": "Spacing",
-          "packageName": "com.webank.design_system.dictionary",
-          "options": {
-            "outputReferences": true
-          }
         }
       ]
     },
@@ -194,53 +49,12 @@
             "objectType": "extension",
             "accessControl": ""
           },
-          "filter": "isPaletteColor"
+          "filter": "isColor"
         },
         {
-          "destination": "DarkColor.swift",
+          "destination": "BorderWidth.swift",
           "format": "ios-swift/enum.swift",
-          "className": "DarkColor: GeneratedColor",
-          "options": {
-            "import": "SwiftUI",
-            "accessControl": ""
-          },
-          "filter": "isDarkColor"
-        },
-        {
-          "destination": "LightColor.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "LightColor: GeneratedColor",
-          "options": {
-            "import": "SwiftUI",
-            "accessControl": ""
-          },
-          "filter": "isLightColor"
-        },
-        {
-          "destination": "LightShadow.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Shadows",
-          "options": {
-            "import": "SwiftUI",
-            "accessControl": ""
-          },
-          "filter": "isLightShadowColor"
-        },
-        {
-          "destination": "DarkShadow.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Shadows",
-          "options": {
-            "import": "SwiftUI",
-            "objectType": "extension",
-            "accessControl": ""
-          },
-          "filter": "isDarkShadowColor"
-        },
-        {
-          "destination": "Border+Width.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Border",
+          "className": "BorderWidth",
           "options": {
             "import": "SwiftUI",
             "accessControl": ""
@@ -248,132 +62,14 @@
           "filter": "isBorderWidth"
         },
         {
-          "destination": "Border+Radius.swift",
+          "destination": "BorderRadius.swift",
           "format": "ios-swift/enum.swift",
-          "className": "Border",
+          "className": "BorderRadius",
           "options": {
-            "objectType": "extension",
             "import": "SwiftUI",
             "accessControl": ""
           },
           "filter": "isBorderRadius"
-        },
-        {
-          "destination": "Opacity.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Opacity",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isOpacity"
-        },
-        {
-          "destination": "LineHeight.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "LineHeight",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isLineHeight"
-        },
-        {
-          "destination": "FontSize.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "FontSize",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isFontSize"
-        },
-        {
-          "destination": "LetterSpacing.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "LetterSpacing",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isLetterSpacing"
-        },
-        {
-          "destination": "ParagraphSpacing.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "ParagraphSpacing",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isParagraphSpacing"
-        },
-        {
-          "destination": "FontWeight.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "FontWeight",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isFontWeight"
-        },
-        {
-          "destination": "TextCase.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "TextCase",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isTextCase"
-        },
-        {
-          "destination": "TextDecoration.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "TextDecoration",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isTextDecoration"
-        },
-        {
-          "destination": "FontFamilies.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "FontFamilies",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isFontFamilies"
-        },
-        {
-          "destination": "Typography.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Typography",
-          "options": {
-            "import": "Foundation",
-            "accessControl": ""
-          },
-          "filter": "isTypography"
-        },
-        {
-          "destination": "Spacing.swift",
-          "format": "ios-swift/enum.swift",
-          "className": "Spacing",
-          "options": {
-            "import": "SwiftUI"
-          },
-          "filter": "isSpacing"
-        }
-      ]
-    },
-    "ios-swift-customs": {
-      "transformGroup": "custom/ios-swift-customs",
-      "buildPath": "build/ios-swift/",
-      "files": [
-        {
-          "destination": "GeneratedColor.swift",
-          "format": "ios-swift/any.swift",
-          "className": "GeneratedColor",
-          "options": {
-            "import": "SwiftUI",
-            "objectType": "protocol",
-            "accessControl": ""
-          },
-          "filter": "isProtocolColor"
         }
       ]
     }

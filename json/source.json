@@ -1,1 +1,53 @@
-{"radius":{"sm":{"type":"dimension","value":8},"md":{"type":"dimension","value":16},"lg":{"type":"dimension","value":24}},"borders":{"border-test":{"sm":{"type":"dimension","value":1},"md":{"type":"dimension","value":2},"lg":{"type":"dimension","value":3},"xl":{"type":"string","value":"4"}}},"colors":{"primary":{"type":"color","value":"#3a5a40ff","blendMode":"normal"},"secondary":{"type":"color","value":"#dad7cdff","blendMode":"normal"},"white":{"type":"color","value":"#ffffffff","blendMode":"normal"}}}
+{
+    "radius": {
+        "sm": {
+            "type": "dimension",
+            "value": 8
+        },
+        "md": {
+            "type": "dimension",
+            "value": 16
+        },
+        "lg": {
+            "type": "dimension",
+            "value": 24
+        }
+    },
+    "borders": {
+        "border": {
+            "sm": {
+                "type": "dimension",
+                "value": 1
+            },
+            "md": {
+                "type": "dimension",
+                "value": 2
+            },
+            "lg": {
+                "type": "dimension",
+                "value": 3
+            },
+            "xl": {
+                "type": "string",
+                "value": "4"
+            }
+        }
+    },
+    "colors": {
+        "primary": {
+            "type": "color",
+            "value": "#3a5a40ff",
+            "blendMode": "normal"
+        },
+        "secondary": {
+            "type": "color",
+            "value": "#dad7cdff",
+            "blendMode": "normal"
+        },
+        "white": {
+            "type": "color",
+            "value": "#ffffffff",
+            "blendMode": "normal"
+        }
+    }
+}
