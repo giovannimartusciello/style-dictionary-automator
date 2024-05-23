@@ -14,11 +14,14 @@ jobs:
         run: |
           git config user.name "Giovanni Martusciello"
           git config user.email "bot@example.com"
-  
+
+      - uses: devops-actions/json-to-file@v1.0.0
+        with:
+          json: '${{ github.event.client_payload.tokens }}'
+          filename: 'test.json'
       - name: Make a commit
         run: |
-          echo ${{ github.event.client_payload.tokens }} > file.json
-          git add file.json
+          git add test.json
           git commit -m "Commit by bot"
           git push
       - env:
