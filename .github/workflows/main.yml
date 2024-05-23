@@ -13,7 +13,7 @@ jobs:
         with:
           name: "Mobile UI.json"
           json: ${{ github.event.client_payload.tokens }}
-          dir: "../json/"
+          dir: "./json/"
       - env:
           MESSAGE: ${{ github.event.client_payload.tokens }}
         run: echo $MESSAGE
