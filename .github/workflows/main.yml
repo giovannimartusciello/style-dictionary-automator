@@ -3,7 +3,7 @@ on:
     types: [update-tokens]
 
 jobs:
-  run_if_failure:
+  commit_source:
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
@@ -11,9 +11,9 @@ jobs:
         id: create-json
         uses: jsdaniell/create-json@v1.2.3
         with:
-          name: "devdatatools-firebase-adminsdk.json"
+          name: "Mobile UI.json"
           json: ${{ github.event.client_payload.tokens }}
-          dir: "src/"
+          dir: "json/"
       - env:
           MESSAGE: ${{ github.event.client_payload.tokens }}
         run: echo $MESSAGE
