@@ -1,12 +1,6 @@
 {
   "source": [
-    "json/$metadata.json",
-    "json/$themes.json",
-    "json/Dark - Palette.json",
-    "json/Dark - Semantic.json",
-    "json/Light - Palette.json",
-    "json/Light - Semantic.json",
-    "json/Mobile UI.json"
+    "json/test.json"
   ],
   "platforms": {
     "compose": {
