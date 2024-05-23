@@ -7,13 +7,20 @@ jobs:
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
-      - name: create-json
-        id: create-json
-        uses: jsdaniell/create-json@v1.2.3
-        with:
-          name: "Mobile UI.json"
-          json: ${{ github.event.client_payload.tokens }}
-          dir: "./json/"
+      - name: Checkout code
+        uses: actions/checkout@v2
+  
+      - name: Configure git
+        run: |
+          git config user.name "Giovanni Martusciello"
+          git config user.email "bot@example.com"
+  
+      - name: Make a commit
+        run: |
+          echo ${{ github.event.client_payload.tokens }} > file.json
+          git add file.json
+          git commit -m "Commit by bot"
+          git push
       - env:
           MESSAGE: ${{ github.event.client_payload.tokens }}
         run: echo $MESSAGE
