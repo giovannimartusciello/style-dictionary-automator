@@ -21,6 +21,6 @@ jobs:
           filename: 'json/test.json'
       - name: Make a commit
         run: |
-          git add test.json
+          git add json/test.json
           git commit -m "Commit by bot"
           git push
