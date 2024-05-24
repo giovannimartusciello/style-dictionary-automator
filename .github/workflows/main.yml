@@ -30,16 +30,9 @@ jobs:
       - name: Build transformer
         run: |
           npm run build
+
           
       - name: Create pull request
-        uses: paygoc6/action-pull-request-another-repo@v1.0.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_folder: 'source-folder'
-          destination_repo: 'giovannimartusciello/style-dictionary-automator'
-          destination_folder: 'swiftuiDSShowcase/Design System'
-          destination_base_branch: 'main'
-          destination_head_branch: 'feature/design-token-update'
-          user_email: 'user-name@paygo.com.br'
-          user_name: 'user-name'
+        run: |
+          git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
+          cp -a build/ios-swift/. swiftuiDSShowcase/swiftuiDSShowcase/Design System
