@@ -45,7 +45,7 @@ jobs:
           git checkout -B "Feature/design-token-update";
           git add .;
           git commit -m "Design System Tokens Update";
-          git push -f --set-upstream https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git -o merge_request.create -o merge_request.target=develop -o merge_request.description="Update design token set";
+          git push -f --set-upstream https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git;
           echo "design tokens pushed to ios successfully";
           else echo "no changes";
           fi
