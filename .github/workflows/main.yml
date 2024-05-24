@@ -36,7 +36,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
-          ls
+          git pull --rebase
           cp -a build/ios-swift/. swiftuiDSShowcase/
           cd swiftuiDSShowcase/
           if [ -n "$(git status --porcelain)" ];
@@ -45,7 +45,6 @@ jobs:
           git add .;
           git commit -m "Design System Tokens Update";
           git config --unset-all http.https://github.com/.extraheader;
-          git pull --rebase
           git push -f --set-upstream https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git;
           echo "design tokens pushed to ios successfully";
           else echo "no changes";
