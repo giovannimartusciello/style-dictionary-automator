@@ -4,6 +4,8 @@ on:
 
 jobs:
   commit_source:
+    permissions:
+      contents: write
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
