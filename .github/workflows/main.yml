@@ -30,9 +30,19 @@ jobs:
       - name: Build transformer
         run: |
           npm run build
-
           
       - name: Create pull request
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
           cp -a build/ios-swift/. swiftuiDSShowcase/Design\ System
+          cd webank-ios/WeBank/Presentation/Resources/Generated/DesignSystem/
+          if [ -n "$(git status --porcelain)" ];
+          then
+          git checkout -B "Feature/design-token-update";
+          git add .;
+          git commit -m "${CI_COMMIT_MESSAGE}";
+          git push -f --set-upstream https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git -o merge_request.create -o merge_request.target=develop -o merge_request.description="Update design token set" -o merge_request.label="DesignSystem";
+          git config --global http.sslVerify true;
+          echo "design tokens pushed to ios successfully";
+          else echo "no changes";
+          fi
