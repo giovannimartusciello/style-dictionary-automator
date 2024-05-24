@@ -34,6 +34,7 @@ jobs:
       - name: Create pull request
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
+          ls
           cp -a build/ios-swift/. swiftuiDSShowcase/
           cd swiftuiDSShowcase/
           if [ -n "$(git status --porcelain)" ];
