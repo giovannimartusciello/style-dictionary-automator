@@ -31,16 +31,17 @@ jobs:
         run: |
           npm run build
           
-      - name: Create pull request
-        uses: cpina/github-action-push-to-another-repository@main
+      - name: Create PR on iOS
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: 'build/ios-swift/'
-          destination-github-username: 'giovannimartusciello'
-          destination-repository-name: 'swiftui-ds-showcase'
-          user-email: giovannimartusciello@gmail.com
-          target-branch: feature/design-token-update
-          target-directory: Design\ System
+          destination_repo: 'giovannimartusciello/swiftui-ds-showcase'
+          destination_folder: 'Design System'
+          destination_base_branch: 'main'
+          destination_head_branch: 'feature/design-token-update'
           create-target-branch-if-needed: true
+          user_email: 'giovannimartusciello@gmail.com'
+          user_name: 'giovannimartusciello'
 
