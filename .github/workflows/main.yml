@@ -10,6 +10,9 @@ jobs:
       contents: write  # To push a branch 
       pull-requests: write
     steps:
+      - name: Setup env var
+        env:
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
       - name: Checkout code
         uses: actions/checkout@v2
   
