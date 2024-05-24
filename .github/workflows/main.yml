@@ -39,6 +39,6 @@ jobs:
           source-directory: 'build/ios-swift/'
           destination-github-username: 'giovannimartusciello'
           destination-repository-name: 'swiftui-ds-showcase'
-          user-email: giovannimartusciello@pina.cat
+          user-email: giovannimartusciello@gmail.com
           target-branch: feature/design-token-update
           target-directory: Design\ System
