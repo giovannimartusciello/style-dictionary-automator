@@ -43,10 +43,3 @@ jobs:
           target-branch: feature/design-token-update
           target-directory: Design\ System
           create-target-branch-if-needed: true
-          
-      - name: Create PR on iOS repo
-        env:
-          GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
-        run: |
-          git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git 
-          gh pr create --title "some title" --body "some body" --head "feature/design-token-update" --base main
