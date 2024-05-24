@@ -34,8 +34,7 @@ jobs:
       - name: Create pull request
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
-          cp -a build/ios-swift/. swiftuiDSShowcase/Design\ System
-          cd webank-ios/WeBank/Presentation/Resources/Generated/DesignSystem/
+          cp -a build/ios-swift/. /
           if [ -n "$(git status --porcelain)" ];
           then
           git checkout -B "Feature/design-token-update";
