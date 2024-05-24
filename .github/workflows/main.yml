@@ -36,7 +36,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
-          git pull --rebase
+          git status
           cp -a build/ios-swift/. swiftuiDSShowcase/
           cd swiftuiDSShowcase/
           if [ -n "$(git status --porcelain)" ];
