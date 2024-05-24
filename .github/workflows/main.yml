@@ -35,4 +35,4 @@ jobs:
       - name: Create pull request
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
-          cp -a build/ios-swift/. swiftuiDSShowcase/swiftuiDSShowcase/Design System
+          cp -a build/ios-swift/. swiftuiDSShowcase/swiftuiDSShowcase/Design\ System
