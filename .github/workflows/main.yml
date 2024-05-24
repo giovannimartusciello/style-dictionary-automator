@@ -14,7 +14,9 @@ jobs:
         run: |
           git config user.name "Design Token"
           git config user.email "tokens@design.system"
-      - uses: devops-actions/json-to-file@v1.0.0
+          
+      - name: create source.json file
+        uses: devops-actions/json-to-file@v1.0.0
         with:
           json: '${{ github.event.client_payload.tokens }}'
           filename: 'json/source.json'
@@ -28,3 +30,16 @@ jobs:
       - name: Build transformer
         run: |
           npm run build
+          
+      - name: Create pull request
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: 'source-folder'
+          destination_repo: 'giovannimartusciello/style-dictionary-automator'
+          destination_folder: 'Design System'
+          destination_base_branch: 'main'
+          destination_head_branch: 'ds-tokens-update'
+          user_email: 'user-name@paygo.com.br'
+          user_name: 'user-name'
