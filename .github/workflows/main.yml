@@ -32,20 +32,13 @@ jobs:
           npm run build
           
       - name: Create pull request
+      - uses: cpina/github-action-push-to-another-repository@main
         env:
-          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
-        run: |
-          git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
-          git restore .
-          cp -a build/ios-swift/. swiftuiDSShowcase/
-          cd swiftuiDSShowcase/
-          if [ -n "$(git status --porcelain)" ];
-          then
-          git checkout -B "Feature/design-token-update";
-          git add .;
-          git commit -m "Design System Tokens Update";
-          git config --unset-all http.https://github.com/.extraheader;
-          git push -f --set-upstream https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git;
-          echo "design tokens pushed to ios successfully";
-          else echo "no changes";
-          fi
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build/ios-swift/'
+          destination-github-username: 'giovannimartusciello'
+          destination-repository-name: 'swiftui-ds-showcase'
+          user-email: giovannimartusciello@pina.cat
+          target-branch: feature/design-token-update
+          target-directory: Design\ System
