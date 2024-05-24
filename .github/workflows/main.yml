@@ -38,7 +38,7 @@ jobs:
         with:
           source_folder: 'source-folder'
           destination_repo: 'giovannimartusciello/style-dictionary-automator'
-          destination_folder: 'Design System'
+          destination_folder: 'swiftuiDSShowcase/Design System'
           destination_base_branch: 'main'
           destination_head_branch: 'ds-tokens-update'
           user_email: 'user-name@paygo.com.br'
