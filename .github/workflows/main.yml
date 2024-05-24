@@ -48,4 +48,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
+          git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git 
           gh pr create --title "some title" --body "some body" --head "feature/design-token-update" --base main
