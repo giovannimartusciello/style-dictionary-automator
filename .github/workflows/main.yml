@@ -36,12 +36,11 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'build/ios-swift/'
+          source_folder: 'build/ios-swift/'
           destination_repo: 'giovannimartusciello/swiftui-ds-showcase'
           destination_folder: 'Design System'
           destination_base_branch: 'main'
           destination_head_branch: 'feature/design-token-update'
-          create-target-branch-if-needed: true
           user_email: 'giovannimartusciello@gmail.com'
           user_name: 'giovannimartusciello'
 
