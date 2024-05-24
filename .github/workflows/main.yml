@@ -7,9 +7,6 @@ jobs:
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
-      - name: Setup env var
-        env:
-          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
       - name: Checkout code
         uses: actions/checkout@v2
   
@@ -35,6 +32,8 @@ jobs:
           npm run build
           
       - name: Create pull request
+        env:
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           git clone https://giovannimartusciello:${{ secrets.API_TOKEN_GITHUB }}@github.com/giovannimartusciello/swiftui-ds-showcase.git --no-local
           ls
