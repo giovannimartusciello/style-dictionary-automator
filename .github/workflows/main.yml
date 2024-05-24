@@ -42,3 +42,5 @@ jobs:
           user-email: giovannimartusciello@gmail.com
           target-branch: feature/design-token-update
           target-directory: Design\ System
+          create-target-branch-if-needed: true
+
