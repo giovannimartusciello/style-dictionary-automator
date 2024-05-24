@@ -1,7 +1,7 @@
 import StyleDictionary from 'style-dictionary';
 
 export class Filter {
-  constructor(name, path, type) {
+  constructor(name, type, path) {
     this.name = name;
     this.type = type;
     this.path = path
@@ -93,7 +93,18 @@ export class Builder {
 export class Common {
 
   static isRawColor(token) {
-    return token.type === 'color' && (token.value.startsWith('#') || token.value.startsWith('rgb'));
+    if (token.type === 'color') {
+      console.log(token)
+      let nameArray = token.path.map((x) => x);
+      nameArray.shift()
+      token.name = Common.camelize(nameArray.join(""));
+    }
+    return token.type === 'color' && (token.value.startsWith('#') || token.value.startsWith('rgb')) && token.path[0].startsWith('primitive');
+  }
+
+  static isRefColor(token) {
+    console.log(token)
+    return token.type === 'color' && token.path[0].startsWith('semantic');
   }
 
   static isBorderWidth(token) {
@@ -106,5 +117,16 @@ export class Common {
 
   static transform(name, value) {
     return StyleDictionary.transform[name].transformer({ value: value });
+  }
+
+  // Define a function named camelize, taking a string parameter 'str'
+  static camelize(str) {
+    // Use the replace method with a regular expression to match non-word characters followed by any character
+    // The regular expression /\W+(.)/g matches one or more non-word characters followed by any character, capturing the character
+    // For each match, a callback function is invoked with 'match' representing the entire match and 'chr' representing the captured character
+    return str.replace(/\W+(.)/g, function(match, chr) {
+        // Convert the captured character to uppercase and return it
+        return chr.toUpperCase();
+    });
   }
 }

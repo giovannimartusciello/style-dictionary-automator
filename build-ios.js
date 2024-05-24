@@ -5,9 +5,9 @@ export class iOSBuilderConfig {
   transformersGroupName = 'custom/ios-swift-separate';
 
   filters = [
-    new Filter("isColor", 'colors', 'color'),
-    new Filter("isBorderWidth", 'borders', 'dimension'),
-    new Filter("isBorderRadius", 'radius', 'dimension'),
+    new Filter("isColor", 'color'),
+    new Filter("isBorderWidth", 'dimension', 'borders'),
+    new Filter("isBorderRadius", 'dimension', 'radius'),
   ]
 
   transformers = [

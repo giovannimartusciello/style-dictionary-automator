@@ -5,7 +5,7 @@ export class AndroidBuilderConfig {
   transformersGroupName = 'custom/compose';
 
   filters = [
-    new Filter("isColor", 'colors', 'color'),
+    new Filter("isColor", 'color'),
     new Filter("isBorderWidth", 'borders', 'dimension'),
     new Filter("isBorderRadius", 'radius', 'dimension'),
   ]

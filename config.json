@@ -11,27 +11,30 @@
           "destination": "ColorPalette.kt",
           "format": "compose/object",
           "className": "ColorPalette",
-          "packageName": "com.webank.design_system.dictionary",
-          "filter": "isColor"
+          "packageName": "com.gm.design_system.dictionary",
+          "filter": "isColor",
+          "options": {
+            "outputReferences": true
+          }
         },
         {
           "destination": "BorderRadius.kt",
           "format": "compose/object",
           "className": "BorderRadius",
-          "packageName": "com.webank.design_system.dictionary",
+          "packageName": "com.gm.design_system.dictionary",
           "filter": "isBorderRadius",
           "options": {
-            "import": "com.webank.common_ui_compose.theme.Border"
+            "import": "com.gm.common_ui_compose.theme.Border"
           }
         },
         {
           "destination": "BorderWitdh.kt",
           "format": "compose/object",
           "className": "BorderWidth",
-          "packageName": "com.webank.design_system.dictionary",
+          "packageName": "com.gm.design_system.dictionary",
           "filter": "isBorderWidth",
           "options": {
-            "import": "com.webank.common_ui_compose.theme.Border"
+            "import": "com.gm.common_ui_compose.theme.Border"
           }
         }
       ]
@@ -41,13 +44,14 @@
       "buildPath": "build/ios-swift/",
       "files": [
         {
-          "destination": "Color.swift",
+          "destination": "Color+Palette.swift",
           "format": "ios-swift/any.swift",
           "className": "Color",
           "options": {
             "import": "SwiftUI",
             "objectType": "extension",
-            "accessControl": ""
+            "accessControl": "",
+            "outputReferences": true
           },
           "filter": "isColor"
         },
