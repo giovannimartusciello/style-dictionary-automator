@@ -43,8 +43,9 @@ jobs:
           target-branch: feature/design-token-update
           target-directory: Design\ System
           create-target-branch-if-needed: true
-      - name: Build transformer
+          
+      - name: Create PR on iOS repo
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          GH_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
         run: |
           gh pr create --title "some title" --body "some body" --head "feature/design-token-update" --base main
