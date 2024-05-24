@@ -4,12 +4,14 @@
 //
 
 // Do not edit directly
-// Generated on Fri, 24 May 2024 15:31:38 GMT
+// Generated on Fri, 24 May 2024 16:02:41 GMT
 
 
 import SwiftUI
 
 extension Color {
+    static let transparent = Color(red: 1.000, green: 1.000, blue: 1.000, opacity: 0)
+    static let white50 = Color(red: 1.000, green: 1.000, blue: 1.000, opacity: 0.5019607843137255)
     static let black = Color(red: 0.000, green: 0.000, blue: 0.000, opacity: 1)
     static let white = Color(red: 1.000, green: 1.000, blue: 1.000, opacity: 1)
     static let rose950 = Color(red: 0.298, green: 0.020, blue: 0.098, opacity: 1)
@@ -254,6 +256,10 @@ extension Color {
     static let slate200 = Color(red: 0.886, green: 0.910, blue: 0.941, opacity: 1)
     static let slate100 = Color(red: 0.945, green: 0.961, blue: 0.976, opacity: 1)
     static let slate50 = Color(red: 0.973, green: 0.980, blue: 0.988, opacity: 1)
+    static let subtlehover = slate200
+    static let subtledefault = slate100
+    static let borderhover = slate200
+    static let borderdefault = slate100
     static let outlinehover = slate100
     static let outlinedefault = white
     static let destructivehover = red700

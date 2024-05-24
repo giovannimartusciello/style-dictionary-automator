@@ -94,7 +94,6 @@ export class Common {
 
   static isRawColor(token) {
     if (token.type === 'color') {
-      console.log(token)
       let nameArray = token.path.map((x) => x);
       nameArray.shift()
       token.name = Common.camelize(nameArray.join(""));
@@ -103,16 +102,15 @@ export class Common {
   }
 
   static isRefColor(token) {
-    console.log(token)
     return token.type === 'color' && token.path[0].startsWith('semantic');
   }
 
   static isBorderWidth(token) {
-    return token.path[0] === 'borders';
+    return token.path.some((path) => path === 'width');
   }
 
   static isBorderRadius(token) {
-    return token.path[0] === 'radius';
+    return token.path.some((path) => path === 'radius');
   }
 
   static transform(name, value) {

@@ -1,7 +1,7 @@
 
 
 // Do not edit directly
-// Generated on Fri, 24 May 2024 15:31:38 GMT
+// Generated on Fri, 24 May 2024 16:02:41 GMT
 
 
 
@@ -12,6 +12,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.*
 
 object ColorPalette {
+  val transparent = Color(0x00ffffff)
+  val white50 = Color(0x80ffffff)
   val black = Color(0xff000000)
   val white = Color(0xffffffff)
   val rose950 = Color(0xff4c0519)
@@ -256,6 +258,10 @@ object ColorPalette {
   val slate200 = Color(0xffe2e8f0)
   val slate100 = Color(0xfff1f5f9)
   val slate50 = Color(0xfff8fafc)
+  val subtlehover = slate200
+  val subtledefault = slate100
+  val borderhover = slate200
+  val borderdefault = slate100
   val outlinehover = slate100
   val outlinedefault = white
   val destructivehover = red700

@@ -6,7 +6,7 @@ export class iOSBuilderConfig {
 
   filters = [
     new Filter("isColor", 'color'),
-    new Filter("isBorderWidth", 'dimension', 'borders'),
+    new Filter("isBorderWidth", 'dimension', 'width'),
     new Filter("isBorderRadius", 'dimension', 'radius'),
   ]
 
@@ -22,11 +22,13 @@ export class iOSBuilderConfig {
   
   makeSwiftUIPxToFloat(token) {
     token.name =  Common.cleanName(token.type, token.name);
+    token.path.shift()
     return parseFloat(token.value).toFixed(1);
   }
 
   makeValueToCGFloat(token) {
     token.name =token.path.at(-1)
+    token.path.shift()
     var sizePxToRem = Common.transform("size/pxToRem", token.value);
     return Common.transform("size/swift/remToCGFloat", sizePxToRem);
   }

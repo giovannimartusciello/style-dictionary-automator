@@ -6,8 +6,8 @@ export class AndroidBuilderConfig {
 
   filters = [
     new Filter("isColor", 'color'),
-    new Filter("isBorderWidth", 'borders', 'dimension'),
-    new Filter("isBorderRadius", 'radius', 'dimension'),
+    new Filter("isBorderWidth", 'dimension', 'width'),
+    new Filter("isBorderRadius", 'dimension', 'radius'),
   ]
 
   transformers = [
@@ -21,7 +21,8 @@ export class AndroidBuilderConfig {
   }
 
   makeValueToDp(token) {
-    token.name =token.path.at(-1)
+    token.name = token.path.at(-1)
+    token.path.shift()
     var sizePxToRem = Common.transform("size/pxToRem", token.value);
     return Common.transform("size/compose/remToDp", sizePxToRem);
   }
