@@ -32,7 +32,7 @@ jobs:
           npm run build
           
       - name: Create pull request
-      - uses: cpina/github-action-push-to-another-repository@main
+        uses: cpina/github-action-push-to-another-repository@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
