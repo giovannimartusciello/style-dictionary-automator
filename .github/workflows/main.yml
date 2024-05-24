@@ -6,9 +6,6 @@ jobs:
   run_build_and_deploy:
     if: ${{ !github.event.client_payload.passed }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # To push a branch 
-      pull-requests: write
     steps:
       - name: Setup env var
         env:
