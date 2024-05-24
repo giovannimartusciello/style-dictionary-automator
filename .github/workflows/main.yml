@@ -40,6 +40,6 @@ jobs:
           destination_repo: 'giovannimartusciello/style-dictionary-automator'
           destination_folder: 'swiftuiDSShowcase/Design System'
           destination_base_branch: 'main'
-          destination_head_branch: 'ds-tokens-update'
+          destination_head_branch: 'feature/design-token-update'
           user_email: 'user-name@paygo.com.br'
           user_name: 'user-name'
